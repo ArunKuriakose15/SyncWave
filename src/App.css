@@ -32,7 +32,38 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: #FBFBFB;
+}
+
+.roboto-text {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.raleway-text {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.1); /* Transparent White */
+  backdrop-filter: blur(10px); /* Blur Effect */
+  border-radius: 50px; /* Rounded Pill */
+  padding: 10px 30px; /* Padding for better visibility */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light Border */
+}
+
+
