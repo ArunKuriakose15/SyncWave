@@ -35,7 +35,7 @@ const Testimonials = () => {
             <div className="row justify-content-center">
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="col-md-4 d-flex justify-content-center">
-                        <div className="card shadow border-0 text-center rounded-4" style={{ width: "20rem" }}>
+                        <div className="card shadow border-0 text-center rounded-4 service-card" style={{ width: "20rem" }}>
                             <div className="card-body pt-5"> {/* Increased padding-top */}
                                 <div className="d-flex justify-content-center">
                                     <img
