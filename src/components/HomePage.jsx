@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "./Footer";
 import Collaborations from "./Collaborations";
 import Testimonials from "./Testimonials";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
     const [showNavbar, setShowNavbar] = useState(false);
@@ -11,7 +12,7 @@ const HomePage = () => {
             const syncWaveElement = document.getElementById("syncwave-title");
             if (syncWaveElement) {
                 const syncWaveBottom = syncWaveElement.getBoundingClientRect().bottom;
-                setShowNavbar(syncWaveBottom < 0); 
+                setShowNavbar(syncWaveBottom < 0);
             }
         };
 
@@ -48,9 +49,9 @@ const HomePage = () => {
 
                 <div className="row">
                     <div className="d-flex flex-column align-items-center">
-                        <button className="btn btn-success rounded-pill roboto-tex" style={{ fontSize: "25px" }}>
+                        <Link to="/services" >    <button className="btn btn-success rounded-pill roboto-tex" style={{ fontSize: "25px" }}>
                             Explore
-                        </button>
+                        </button></Link>
                         <div className="border-bottom mt-3" style={{ width: "50%", borderWidth: "3px", borderColor: "#000" }}></div>
                     </div>
                 </div>
@@ -61,10 +62,8 @@ const HomePage = () => {
             <br /><br />
 
             <Collaborations />
-            <Testimonials/>
-
+            <Testimonials />
             <Footer />
-
         </div>
 
 

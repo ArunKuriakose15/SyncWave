@@ -3,7 +3,7 @@ import React from 'react'
 const Collaborations = () => {
     return (
         <div>
-            <div className="container my-5">
+            <div className="container my-5" >
                 <div className="row align-items-center">
                     <div className="col-12 col-md-6 d-flex justify-content-center">
                         <img
@@ -30,21 +30,21 @@ const Collaborations = () => {
 
                 <br /><br />
 
-                <div className="container my-5">
+                <div className="container my-5 ">
                     <div className="row text-center">
-                        <div className="col-12 col-md-4">
+                        <div className="col-12 col-md-4 service-card">
                             <h1 className="fw-bold">
                                 100<span style={{ color: "#9b0f30" }}>+</span>
                             </h1>
                             <p className="text-muted">Digital Strategy Consulting</p>
                         </div>
-                        <div className="col-12 col-md-4 border-start border-end">
+                        <div className="col-12 col-md-4 border-start border-end service-card">
                             <h1 className="fw-bold">
                                 350<span style={{ color: "#9b0f30" }}>+</span>
                             </h1>
                             <p className="text-muted">AI and Machine Learning Solutions</p>
                         </div>
-                        <div className="col-12 col-md-4">
+                        <div className="col-12 col-md-4 service-card">
                             <h1 className="fw-bold">
                                 5k<span style={{ color: "#9b0f30" }}>+</span>
                             </h1>

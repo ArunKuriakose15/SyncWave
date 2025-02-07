@@ -66,4 +66,10 @@ body{
   border: 1px solid rgba(255, 255, 255, 0.2); /* Light Border */
 }
 
+.service-card {
+  transition: transform 0.3s ease-in-out;
+}
+.service-card:hover {
+  transform: scale(1.05);
+}
 
