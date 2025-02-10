@@ -4,7 +4,9 @@ import Footer from './Footer';
 import educationVideo from '../assets/video/education.mp4';
 import healthVideo from '../assets/video/healthcare.mp4';
 import hospitalityVideo from '../assets/video/hospitality.mp4';
+import beautyVideo from '../assets/video/beauty.mp4';
 import ecommerceVideo from '../assets/video/e-commerce.mp4';
+import fitnessVideo from '../assets/video/fitness.mp4';
 
 const Portfolio = () => {
     const projects = [
@@ -17,8 +19,14 @@ const Portfolio = () => {
         { category: "Hospitality", description: "Engaging platforms for hotels and resorts.",
             video: hospitalityVideo
          },
+         { category: "Beauty & Grooming", description: "Advanced solutions for salons and spas.",
+            video: beautyVideo
+         },
         { category: "E-commerce", description: "Feature-rich online stores.",
             video: ecommerceVideo
+         },
+         { category: "Fitness", description: "Motivational, user-friendly platforms for gyms and fitness centers.",
+            video: fitnessVideo
          }
     ];
     return (
