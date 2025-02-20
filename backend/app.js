@@ -4,6 +4,8 @@ const cors = require("cors")
 const mongoose = require("mongoose")
 const userRoutes = require("./controllers/userRouter")
 const blogRoutes = require("./controllers/blogRouter")
+const contactRouter = require("./controllers/contactRouter")
+const newsletterRouter = require("./controllers/newsletterRouter")
 
 const app = express()
 app.use(express.json())
@@ -12,6 +14,8 @@ const port = 8085;
 
 app.use("/api/users", userRoutes)
 app.use("/api/blogs", blogRoutes)
+app.use("/api/contacts", contactRouter)
+app.use("/api/newsletter", newsletterRouter)
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {

@@ -40,7 +40,7 @@ router.post("/view_blogs", async (req, res) => {
     }
 })
 
-router.post("/delete_blog/:id",verifyToken,verifyAdmin, async (req, res) => {
+router.post("/delete_blog/:id", verifyToken, verifyAdmin, async (req, res) => {
     try {
         const { id } = req.params;
         const deletedBlog = await blogModel.findByIdAndDelete(id);
@@ -49,17 +49,17 @@ router.post("/delete_blog/:id",verifyToken,verifyAdmin, async (req, res) => {
             return res.status(404).json({ message: "Blog not found" });
         }
 
-        res.status(200).json({ message: "Blog deleted successfully", deletedBlog });
+        res.status(200).json({ message: "Blog deleted successfully" });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error", error })
     }
 })
 
-router.post("/update_blog/:id",verifyToken,verifyAdmin, async (req, res) => {
+router.post("/update_blog/:id", verifyToken, verifyAdmin, async (req, res) => {
     try {
         const { id } = req.params;
         const { title, description, author } = req.body;
-console.log(title)
+        console.log(title)
         const updatedBlog = await blogModel.findByIdAndUpdate(
             id,
             { title, description, author }
