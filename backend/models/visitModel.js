@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose")
 
 const visitorSchema = new mongoose.Schema({
   date: {
@@ -9,11 +9,7 @@ const visitorSchema = new mongoose.Schema({
   daily_count: {
     type: Number,
     default: 0,
-  },
-  total_count: {
-    type: Number,
-    default: 0,
-  },
+  }
 });
 
 module.exports = mongoose.model("visitor", visitorSchema);

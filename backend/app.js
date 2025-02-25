@@ -6,6 +6,8 @@ const userRoutes = require("./controllers/userRouter")
 const blogRoutes = require("./controllers/blogRouter")
 const contactRouter = require("./controllers/contactRouter")
 const newsletterRouter = require("./controllers/newsletterRouter")
+const jobRouter = require("./controllers/jobRouter")
+const visitRouter = require("./controllers/visitRouter")
 
 const app = express()
 app.use(express.json())
@@ -16,6 +18,8 @@ app.use("/api/users", userRoutes)
 app.use("/api/blogs", blogRoutes)
 app.use("/api/contacts", contactRouter)
 app.use("/api/newsletter", newsletterRouter)
+app.use("/api/jobs", jobRouter)
+app.use("/api/visit", visitRouter)
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
