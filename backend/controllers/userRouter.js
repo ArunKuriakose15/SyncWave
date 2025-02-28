@@ -5,6 +5,8 @@ const jwt = require("jsonwebtoken")
 const userModel = require("../models/userModel");
 const verifyUser = require("../middleware/verifyUser");
 const verifyToken = require("../middleware/verifyToken");
+const sendEmail = require("./mailer");
+
 const router = express.Router()
 
 
@@ -36,6 +38,12 @@ router.post("/signup", async (req, res) => {
         data.password = hashedPassword
         let user = new userModel(data)
         let result = await user.save()
+
+        await sendEmail(
+            data.email,
+            "Welcome to SyncWave!",
+            `Hi ${data.name}, thank you for creating an account with us.`,
+        );
         res.status(200).json({ message: "User registered successfully" });
     }
     catch (error) {
